@@ -3,11 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		33305553DCB0D132D681351E /* Pods_DSirius.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C783FB7CB203D36302033D /* Pods_DSirius.framework */; };
+		B98E2C3325E5523C00E6FEFB /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98E2C3125E5523C00E6FEFB /* MessageCell.swift */; };
+		B98E2C3425E5523C00E6FEFB /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B98E2C3225E5523C00E6FEFB /* MessageCell.xib */; };
 		B991088C25E4FA57000744FF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B991088B25E4FA57000744FF /* GoogleService-Info.plist */; };
 		B9B5008E25E3D8E10005AA37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B5008D25E3D8E10005AA37 /* AppDelegate.swift */; };
 		B9B5009025E3D8E10005AA37 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B5008F25E3D8E10005AA37 /* SceneDelegate.swift */; };
@@ -28,12 +30,15 @@
 		B9B500CA25E3E87B0005AA37 /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9B500C025E3E87B0005AA37 /* Lato-Black.ttf */; };
 		B9B500CB25E3E87B0005AA37 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9B500C125E3E87B0005AA37 /* Lato-Regular.ttf */; };
 		B9B500CC25E3E87B0005AA37 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9B500C225E3E87B0005AA37 /* Lato-Bold.ttf */; };
+		B9E450F725E5352300B2D535 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E450F625E5352300B2D535 /* Message.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		42C783FB7CB203D36302033D /* Pods_DSirius.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DSirius.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		49A52FFC2DD3E82341A8EE6A /* Pods-DSirius.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DSirius.debug.xcconfig"; path = "Target Support Files/Pods-DSirius/Pods-DSirius.debug.xcconfig"; sourceTree = "<group>"; };
 		8EFF0D03B15285885A5F9B66 /* Pods-DSirius.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DSirius.release.xcconfig"; path = "Target Support Files/Pods-DSirius/Pods-DSirius.release.xcconfig"; sourceTree = "<group>"; };
+		B98E2C3125E5523C00E6FEFB /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		B98E2C3225E5523C00E6FEFB /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 		B991088B25E4FA57000744FF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B9B5008A25E3D8E10005AA37 /* DSirius.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DSirius.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9B5008D25E3D8E10005AA37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +61,7 @@
 		B9B500C025E3E87B0005AA37 /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
 		B9B500C125E3E87B0005AA37 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		B9B500C225E3E87B0005AA37 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
+		B9E450F625E5352300B2D535 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,11 +114,11 @@
 		B9B5008C25E3D8E10005AA37 /* DSirius */ = {
 			isa = PBXGroup;
 			children = (
+				B9E450F925E5353500B2D535 /* Models */,
 				B9B500A325E3D9BC0005AA37 /* AppDelegate */,
 				B9B500A425E3D9CF0005AA37 /* Views */,
 				B9B500A525E3D9E70005AA37 /* Controllers */,
 				B9B5009625E3D8E20005AA37 /* Assets.xcassets */,
-				B9B5009825E3D8E20005AA37 /* LaunchScreen.storyboard */,
 				B9B5009B25E3D8E20005AA37 /* Info.plist */,
 				B991088B25E4FA57000744FF /* GoogleService-Info.plist */,
 				B9B500B825E3E8580005AA37 /* Fonts */,
@@ -133,6 +139,9 @@
 			isa = PBXGroup;
 			children = (
 				B9B5009325E3D8E10005AA37 /* Main.storyboard */,
+				B9B5009825E3D8E20005AA37 /* LaunchScreen.storyboard */,
+				B98E2C3125E5523C00E6FEFB /* MessageCell.swift */,
+				B98E2C3225E5523C00E6FEFB /* MessageCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -163,6 +172,14 @@
 				B9B500B925E3E87B0005AA37 /* Lato-ThinItalic.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		B9E450F925E5353500B2D535 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B9E450F625E5352300B2D535 /* Message.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +251,7 @@
 				B9B500CA25E3E87B0005AA37 /* Lato-Black.ttf in Resources */,
 				B9B500CB25E3E87B0005AA37 /* Lato-Regular.ttf in Resources */,
 				B9B500C425E3E87B0005AA37 /* Lato-Thin.ttf in Resources */,
+				B98E2C3425E5523C00E6FEFB /* MessageCell.xib in Resources */,
 				B9B500C525E3E87B0005AA37 /* Lato-BoldItalic.ttf in Resources */,
 				B9B5009725E3D8E20005AA37 /* Assets.xcassets in Resources */,
 				B9B5009525E3D8E10005AA37 /* Main.storyboard in Resources */,
@@ -291,11 +309,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9B500AA25E3DAAA0005AA37 /* WelcomeViewController.swift in Sources */,
+				B98E2C3325E5523C00E6FEFB /* MessageCell.swift in Sources */,
 				B9B5008E25E3D8E10005AA37 /* AppDelegate.swift in Sources */,
 				B9B5009025E3D8E10005AA37 /* SceneDelegate.swift in Sources */,
 				B9B500B225E3DAEB0005AA37 /* LoginViewController.swift in Sources */,
 				B9B500B525E3DAFF0005AA37 /* ChatViewController.swift in Sources */,
 				B9B500AF25E3DADB0005AA37 /* RegisterViewController.swift in Sources */,
+				B9E450F725E5352300B2D535 /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
