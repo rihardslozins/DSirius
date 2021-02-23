@@ -13,11 +13,9 @@ class ChatViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var messageTextField: UITextField!
     
-    var messages: [Message] = [
-        Message(sender: "1@2.com", body: "Hey!"),
-        Message(sender: "a@b.com", body: "Hello!"),
-        Message(sender: "1@2.com", body: "Whats up?")
-    ]
+    let db = Firestore.firestore()
+    
+    var messages: [Message] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,9 +23,11 @@ class ChatViewController: UIViewController {
         //Hides back button
         navigationItem.hidesBackButton = true
         addNavBarImage()
-
+        
         tableView.dataSource = self
-        tableView.register(UINib(nibName: "MessageCell", bundle: nil), forCellReuseIdentifier: "ReusableCell")
+        tableView.register(UINib(nibName: K.cellNibName, bundle: nil), forCellReuseIdentifier: K.cellIdentifier)
+        
+        loadMessages()
     }
     
     func addNavBarImage() {
@@ -43,8 +43,51 @@ class ChatViewController: UIViewController {
         self.navigationItem.titleView = titleView
     }
     
+    func loadMessages() {
+        
+        db.collection(K.FStore.collectionName)
+            .order(by: K.FStore.dateField)
+            .addSnapshotListener { (querySnapshot, error) in
+
+            //Empties the messages
+            self.messages = []
+            
+            if let err = error {
+                print("There was an issue retrieving data From Firestore. \(err)")
+            }else{
+                if let snapshotDocuments =  querySnapshot?.documents {
+                    for doc in snapshotDocuments{
+                        let data = doc.data()
+                        if let messageSender = data[K.FStore.senderField] as? String, let messageBody = data[K.FStore.bodyField] as? String {
+                            let newMessage = Message(sender: messageSender, body: messageBody)
+                            self.messages.append(newMessage)
+                            
+                            DispatchQueue.main.async {
+                                self.tableView.reloadData()
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
     @IBAction func sendPressed(_ sender: Any) {
         
+        if let messageBody = messageTextField.text, let messageSender = Auth.auth().currentUser?.email {
+            db.collection(K.FStore.collectionName).addDocument(data: [
+                K.FStore.senderField: messageSender,
+                K.FStore.bodyField: messageBody,
+                K.FStore.dateField: Date().timeIntervalSince1970
+            ]) { (error) in
+                if let err = error {
+                    print("There was an issue, \(err)")
+                }else{
+                    
+                    print("Successfully saved data")
+                }
+            }
+        }
     }
     
     @IBAction func logoOutPressed(_ sender: UIBarButtonItem) {
@@ -60,7 +103,6 @@ class ChatViewController: UIViewController {
             print ("Error signing out: %@", signOutError)
         }
     }
-    
 }
 
 extension ChatViewController: UITableViewDataSource {
@@ -70,7 +112,7 @@ extension ChatViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ReusableCell", for: indexPath) as! MessageCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath) as! MessageCell
         cell.label?.text = messages[indexPath.row].body
         return cell
     }
