@@ -91,8 +91,7 @@ class ChatViewController: UIViewController {
     }
     
     @IBAction func logoOutPressed(_ sender: UIBarButtonItem) {
-        
-        
+
         do {
             try Auth.auth().signOut()
             
