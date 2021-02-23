@@ -121,7 +121,7 @@
                                         <rect key="frame" x="0.0" y="114" width="414" height="198.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cAf-5G-RnK">
-                                                <rect key="frame" x="166" y="118.5" width="82" height="60"/>
+                                                <rect key="frame" x="165.5" y="118.5" width="83" height="60"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="uTM-qA-bSw"/>
                                                 </constraints>
@@ -256,7 +256,13 @@
                             <constraint firstItem="hv8-Wu-XA4" firstAttribute="trailing" secondItem="t74-ey-3I6" secondAttribute="trailing" id="wwX-3K-mwe"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="iGd-BX-Dgx"/>
+                    <navigationItem key="navigationItem" id="iGd-BX-Dgx">
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="FyA-dL-lMD">
+                            <connections>
+                                <action selector="logoOutPressed:" destination="30c-Zd-Nbk" id="9tz-iB-iwY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="messageTextField" destination="BH5-3E-913" id="YHX-RL-XxB"/>
                         <outlet property="tableView" destination="hv8-Wu-XA4" id="Opq-7z-McH"/>
@@ -313,7 +319,7 @@
                                         <rect key="frame" x="0.0" y="115.5" width="414" height="197"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GaF-at-GJx">
-                                                <rect key="frame" x="176.5" y="117" width="61" height="60"/>
+                                                <rect key="frame" x="178" y="117" width="58" height="60"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="vkO-Sg-Rfs"/>
                                                 </constraints>
