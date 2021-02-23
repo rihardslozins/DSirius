@@ -211,7 +211,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="C2z-Kq-HnN"/>
                                         </constraints>
-                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" name="TextFieldMessage"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -405,6 +405,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="8bc-Ni-Bgi"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" name="NavBarItems"/>
     <resources>
         <image name="Dsirius_Logo" width="338" height="209"/>
         <image name="Placeholder" width="257" height="64.5"/>
@@ -421,11 +422,17 @@
         <namedColor name="BrandRed">
             <color red="0.92199999094009399" green="0.093999996781349182" blue="0.32899999618530273" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="NavBarItems">
+            <color red="0.19599999487400055" green="0.18400000035762787" blue="0.23899999260902405" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="PlaceholderText">
             <color red="0.19599999487400055" green="0.18400000035762787" blue="0.23899999260902405" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="RegisterButton">
             <color red="0.21600000560283661" green="0.65100002288818359" blue="0.89399999380111694" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TextFieldMessage">
+            <color red="0.19599999487400055" green="0.18400000035762787" blue="0.23899999260902405" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
