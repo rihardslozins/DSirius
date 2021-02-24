@@ -100,13 +100,14 @@
                                             </imageView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1kx-Kr-aDk">
                                                 <rect key="frame" x="83" y="35" width="248" height="34"/>
+                                                <color key="tintColor" name="PlaceholderText"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="34" id="Le2-ad-aAs"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="248" id="p7A-oL-pGn"/>
                                                 </constraints>
                                                 <color key="textColor" name="PlaceholderText"/>
                                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="28"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" name="BrandRegister"/>
@@ -118,7 +119,7 @@
                                             <constraint firstAttribute="trailing" secondItem="1kx-Kr-aDk" secondAttribute="trailing" constant="83" id="WHn-0n-F2l"/>
                                             <constraint firstAttribute="bottom" secondItem="zMY-VJ-aQp" secondAttribute="bottom" constant="20" symbolic="YES" id="fst-iA-XOB"/>
                                             <constraint firstAttribute="bottom" secondItem="1kx-Kr-aDk" secondAttribute="bottom" constant="45" id="q6W-3U-TxO"/>
-                                            <constraint firstItem="1kx-Kr-aDk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hLU-wd-bXN" secondAttribute="leading" symbolic="YES" id="v3k-pp-7Nn"/>
+                                            <constraint firstItem="1kx-Kr-aDk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hLU-wd-bXN" secondAttribute="leading" constant="20" symbolic="YES" id="v3k-pp-7Nn"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dmy-Dp-kg6" userLabel="Password">
@@ -143,13 +144,14 @@
                                             </imageView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wi2-PI-ubB">
                                                 <rect key="frame" x="83" y="36" width="248" height="35.5"/>
+                                                <color key="tintColor" name="PlaceholderText"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35.5" id="bBz-jZ-E55"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="248" id="fje-J6-lP4"/>
                                                 </constraints>
                                                 <color key="textColor" name="PlaceholderText"/>
                                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="28"/>
-                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" name="BrandRegister"/>
@@ -158,7 +160,7 @@
                                             <constraint firstItem="cAf-5G-RnK" firstAttribute="top" secondItem="Y0Q-z5-hHb" secondAttribute="bottom" constant="23" id="6dW-bc-2tD"/>
                                             <constraint firstItem="Y0Q-z5-hHb" firstAttribute="top" secondItem="dmy-Dp-kg6" secondAttribute="top" constant="20" symbolic="YES" id="8aJ-Qd-HQn"/>
                                             <constraint firstItem="cAf-5G-RnK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dmy-Dp-kg6" secondAttribute="leading" constant="20" symbolic="YES" id="AKc-tX-fhS"/>
-                                            <constraint firstItem="wi2-PI-ubB" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dmy-Dp-kg6" secondAttribute="leading" symbolic="YES" id="Awz-y0-lCM"/>
+                                            <constraint firstItem="wi2-PI-ubB" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dmy-Dp-kg6" secondAttribute="leading" constant="20" symbolic="YES" id="Awz-y0-lCM"/>
                                             <constraint firstItem="cAf-5G-RnK" firstAttribute="top" secondItem="wi2-PI-ubB" secondAttribute="bottom" constant="47" id="M4c-37-3TX"/>
                                             <constraint firstAttribute="trailing" secondItem="cAf-5G-RnK" secondAttribute="trailing" constant="165.5" id="WYh-Rh-dql"/>
                                             <constraint firstAttribute="bottom" secondItem="cAf-5G-RnK" secondAttribute="bottom" constant="41" id="cML-hn-LUE"/>
@@ -216,7 +218,7 @@
                                         </constraints>
                                         <color key="textColor" name="TextFieldMessage"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vzJ-DS-1Xf">
                                         <rect key="frame" x="354" y="20" width="40" height="40"/>
@@ -293,13 +295,14 @@
                                             </imageView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jnb-gH-WVp">
                                                 <rect key="frame" x="83" y="35" width="248" height="35.5"/>
+                                                <color key="tintColor" name="PlaceholderText"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35.5" id="mfO-ah-Xts"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="248" id="rkg-mO-Jco"/>
                                                 </constraints>
                                                 <color key="textColor" name="PlaceholderText"/>
                                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="28"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" name="BrandLogin"/>
@@ -336,13 +339,14 @@
                                             </imageView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iNd-so-PSq">
                                                 <rect key="frame" x="83" y="36" width="248" height="34"/>
+                                                <color key="tintColor" name="PlaceholderText"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="248" id="1lh-xA-4sq"/>
                                                     <constraint firstAttribute="height" constant="34" id="hRE-vP-xRx"/>
                                                 </constraints>
                                                 <color key="textColor" name="PlaceholderText"/>
                                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="28"/>
-                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" name="BrandLogin"/>
@@ -415,13 +419,13 @@
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="BrandLogin">
-            <color red="0.21568627450980393" green="0.65098039215686276" blue="0.89411764705882346" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.21600000560283661" green="0.65100002288818359" blue="0.89399999380111694" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="BrandRed">
             <color red="0.92156862745098034" green="0.094117647058823528" blue="0.32941176470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="BrandRegister">
-            <color red="0.72549019607843135" green="0.90196078431372551" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.72500002384185791" green="0.90200001001358032" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="NavBarItems">
             <color red="0.19599999487400055" green="0.18400000035762787" blue="0.23899999260902405" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

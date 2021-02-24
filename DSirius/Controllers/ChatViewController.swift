@@ -48,30 +48,30 @@ class ChatViewController: UIViewController {
         db.collection(K.FStore.collectionName)
             .order(by: K.FStore.dateField)
             .addSnapshotListener { (querySnapshot, error) in
-
-            //Empties the messages
-            self.messages = []
-            
-            if let err = error {
-                print("There was an issue retrieving data From Firestore. \(err)")
-            }else{
-                if let snapshotDocuments =  querySnapshot?.documents {
-                    for doc in snapshotDocuments{
-                        let data = doc.data()
-                        if let messageSender = data[K.FStore.senderField] as? String, let messageBody = data[K.FStore.bodyField] as? String {
-                            let newMessage = Message(sender: messageSender, body: messageBody)
-                            self.messages.append(newMessage)
-                            
-                            DispatchQueue.main.async {
-                                self.tableView.reloadData()
-                                let indexPath = IndexPath(row: self.messages.count - 1, section: 0)
-                                self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
+                
+                //Empties the messages
+                self.messages = []
+                
+                if let err = error {
+                    print("There was an issue retrieving data From Firestore. \(err)")
+                }else{
+                    if let snapshotDocuments =  querySnapshot?.documents {
+                        for doc in snapshotDocuments{
+                            let data = doc.data()
+                            if let messageSender = data[K.FStore.senderField] as? String, let messageBody = data[K.FStore.bodyField] as? String {
+                                let newMessage = Message(sender: messageSender, body: messageBody)
+                                self.messages.append(newMessage)
+                                
+                                DispatchQueue.main.async {
+                                    self.tableView.reloadData()
+                                    let indexPath = IndexPath(row: self.messages.count - 1, section: 0)
+                                    self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
+                                }
                             }
                         }
                     }
                 }
             }
-        }
     }
     
     @IBAction func sendPressed(_ sender: Any) {
@@ -85,7 +85,6 @@ class ChatViewController: UIViewController {
                 if let err = error {
                     print("There was an issue, \(err)")
                 }else{
-                    
                     print("Successfully saved data")
                 }
             }
@@ -93,7 +92,7 @@ class ChatViewController: UIViewController {
     }
     
     @IBAction func logoOutPressed(_ sender: UIBarButtonItem) {
-
+        
         do {
             try Auth.auth().signOut()
             

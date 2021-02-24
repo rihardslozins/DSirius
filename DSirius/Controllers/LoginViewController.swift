@@ -19,9 +19,15 @@ class LoginViewController: UIViewController {
         if let email = emailTextField.text, let password = passwordTextField.text {
             
             Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
-                if let err = error {
-                    print(err.localizedDescription)
+                
+                if error != nil {
+                    let alert = UIAlertController(title: "Invalid Details", message: "Your Mail or password is incorrect.", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Try Again", style: .default, handler: nil))
+                    
+                    self.present(alert, animated: true)
+                    
                 } else {
+                    
                     //Navigate to the ChatViewController
                     self.performSegue(withIdentifier: K.loginSegue, sender: self)
                 }
