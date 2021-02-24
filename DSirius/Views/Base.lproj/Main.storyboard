@@ -26,7 +26,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LPi-dp-8Z2">
                                 <rect key="frame" x="0.0" y="732" width="414" height="60"/>
-                                <color key="backgroundColor" name="BrandLightBlue"/>
+                                <color key="backgroundColor" name="BrandRegister"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="X1m-Fq-9ir"/>
                                 </constraints>
@@ -40,7 +40,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LlR-N8-grU">
                                 <rect key="frame" x="0.0" y="802" width="414" height="60"/>
-                                <color key="backgroundColor" name="BrandBlue"/>
+                                <color key="backgroundColor" name="BrandLogin"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="Dsm-aj-6g1"/>
                                 </constraints>
@@ -57,7 +57,7 @@
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" name="BackgroundColor"/>
+                        <color key="backgroundColor" name="BackgroundColorApp"/>
                         <constraints>
                             <constraint firstItem="LlR-N8-grU" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Dfe-kj-vG5"/>
                             <constraint firstItem="LlR-N8-grU" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="H1R-u5-1Yg"/>
@@ -109,7 +109,7 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
-                                        <color key="backgroundColor" name="BrandLightBlue"/>
+                                        <color key="backgroundColor" name="BrandRegister"/>
                                         <constraints>
                                             <constraint firstItem="zMY-VJ-aQp" firstAttribute="top" secondItem="hLU-wd-bXN" secondAttribute="top" constant="20" symbolic="YES" id="Fcp-kM-nGy"/>
                                             <constraint firstAttribute="trailing" secondItem="zMY-VJ-aQp" secondAttribute="trailing" constant="8" id="Nrl-Pn-mmd"/>
@@ -152,7 +152,7 @@
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                         </subviews>
-                                        <color key="backgroundColor" name="BrandLightBlue"/>
+                                        <color key="backgroundColor" name="BrandRegister"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="wi2-PI-ubB" secondAttribute="trailing" constant="83" id="1PE-pT-aZo"/>
                                             <constraint firstItem="cAf-5G-RnK" firstAttribute="top" secondItem="Y0Q-z5-hHb" secondAttribute="bottom" constant="23" id="6dW-bc-2tD"/>
@@ -172,7 +172,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jFU-JE-s6Y"/>
-                        <color key="backgroundColor" name="BrandLightBlue"/>
+                        <color key="backgroundColor" name="BrandRegister"/>
                         <constraints>
                             <constraint firstItem="hhN-cY-oM9" firstAttribute="trailing" secondItem="jFU-JE-s6Y" secondAttribute="trailing" id="D6R-3q-ZPE"/>
                             <constraint firstItem="jFU-JE-s6Y" firstAttribute="bottom" secondItem="hhN-cY-oM9" secondAttribute="bottom" constant="397.5" id="UM6-iF-5vz"/>
@@ -200,15 +200,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hv8-Wu-XA4">
-                                <rect key="frame" x="0.0" y="88" width="414" height="715"/>
-                                <color key="backgroundColor" name="BackgroundColor"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="695"/>
+                                <color key="backgroundColor" name="BackgroundColorApp"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PBx-90-Eme" userLabel="MessageField">
                                 <rect key="frame" x="0.0" y="782" width="414" height="80"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write a message..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BH5-3E-913">
                                         <rect key="frame" x="20" y="20" width="314" height="40"/>
-                                        <color key="backgroundColor" name="BackgroundColor"/>
+                                        <color key="backgroundColor" name="BackgroundColorApp"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="314" id="6LQ-Sw-C4e"/>
                                             <constraint firstAttribute="height" constant="40" id="ebO-oZ-YQv"/>
@@ -249,7 +249,7 @@
                             <constraint firstItem="PBx-90-Eme" firstAttribute="leading" secondItem="hv8-Wu-XA4" secondAttribute="leading" id="CKT-jS-rYo"/>
                             <constraint firstItem="hv8-Wu-XA4" firstAttribute="leading" secondItem="t74-ey-3I6" secondAttribute="leading" id="CZb-P1-Kgs"/>
                             <constraint firstItem="hv8-Wu-XA4" firstAttribute="trailing" secondItem="t74-ey-3I6" secondAttribute="trailing" id="Vo9-ms-M7h"/>
-                            <constraint firstAttribute="bottom" secondItem="hv8-Wu-XA4" secondAttribute="bottom" constant="93" id="sGM-pA-Ne3"/>
+                            <constraint firstAttribute="bottom" secondItem="hv8-Wu-XA4" secondAttribute="bottom" constant="113" id="sGM-pA-Ne3"/>
                             <constraint firstItem="hv8-Wu-XA4" firstAttribute="top" secondItem="t74-ey-3I6" secondAttribute="top" id="sex-MA-MYA"/>
                             <constraint firstItem="PBx-90-Eme" firstAttribute="bottom" secondItem="t74-ey-3I6" secondAttribute="bottom" id="twl-6g-uvU"/>
                         </constraints>
@@ -291,7 +291,7 @@
                                                     <constraint firstAttribute="height" constant="75.5" id="xqz-bY-BSq"/>
                                                 </constraints>
                                             </imageView>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1@2.com" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jnb-gH-WVp">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jnb-gH-WVp">
                                                 <rect key="frame" x="83" y="35" width="248" height="35.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35.5" id="mfO-ah-Xts"/>
@@ -302,9 +302,9 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
-                                        <color key="backgroundColor" name="BrandBlue"/>
+                                        <color key="backgroundColor" name="BrandLogin"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Jnb-gH-WVp" secondAttribute="trailing" symbolic="YES" id="5sx-eg-1Sw"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Jnb-gH-WVp" secondAttribute="trailing" constant="20" symbolic="YES" id="5sx-eg-1Sw"/>
                                             <constraint firstAttribute="trailing" secondItem="jdq-GS-m0S" secondAttribute="trailing" constant="8" id="NSn-rF-CdN"/>
                                             <constraint firstAttribute="bottom" secondItem="Jnb-gH-WVp" secondAttribute="bottom" constant="45" id="a4r-M0-OKx"/>
                                             <constraint firstItem="Jnb-gH-WVp" firstAttribute="leading" secondItem="Amx-HW-1F2" secondAttribute="leading" constant="83" id="dUZ-wJ-yec"/>
@@ -334,7 +334,7 @@
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="42X-aH-tnA">
                                                 <rect key="frame" x="20" y="20" width="374" height="74"/>
                                             </imageView>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="klp987mn" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iNd-so-PSq">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iNd-so-PSq">
                                                 <rect key="frame" x="83" y="36" width="248" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="248" id="1lh-xA-4sq"/>
@@ -345,9 +345,9 @@
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                         </subviews>
-                                        <color key="backgroundColor" name="BrandBlue"/>
+                                        <color key="backgroundColor" name="BrandLogin"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="iNd-so-PSq" secondAttribute="trailing" symbolic="YES" id="53d-02-iNI"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="iNd-so-PSq" secondAttribute="trailing" constant="20" symbolic="YES" id="53d-02-iNI"/>
                                             <constraint firstItem="iNd-so-PSq" firstAttribute="top" secondItem="VTb-wS-rry" secondAttribute="top" constant="36" id="AP8-PF-vbV"/>
                                             <constraint firstItem="GaF-at-GJx" firstAttribute="top" secondItem="42X-aH-tnA" secondAttribute="bottom" constant="23" id="LUX-ER-GC9"/>
                                             <constraint firstItem="42X-aH-tnA" firstAttribute="top" secondItem="VTb-wS-rry" secondAttribute="top" constant="20" symbolic="YES" id="MPe-yx-T8D"/>
@@ -365,7 +365,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fF6-rM-gEl"/>
-                        <color key="backgroundColor" name="BrandBlue"/>
+                        <color key="backgroundColor" name="BrandLogin"/>
                         <constraints>
                             <constraint firstItem="fF6-rM-gEl" firstAttribute="bottom" secondItem="Chb-iZ-7md" secondAttribute="bottom" constant="397.5" id="A8h-Y7-1Gg"/>
                             <constraint firstItem="Chb-iZ-7md" firstAttribute="top" secondItem="fF6-rM-gEl" secondAttribute="top" constant="64" id="HXG-mr-cvI"/>
@@ -411,17 +411,17 @@
         <image name="Dsirius_Logo" width="338" height="209"/>
         <image name="Placeholder" width="257" height="64.5"/>
         <image name="paperplane.fill" catalog="system" width="128" height="118"/>
-        <namedColor name="BackgroundColor">
+        <namedColor name="BackgroundColorApp">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="BrandBlue">
-            <color red="0.21600000560283661" green="0.65100002288818359" blue="0.89399999380111694" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="BrandLightBlue">
-            <color red="0.72500002384185791" green="0.90200001001358032" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="BrandLogin">
+            <color red="0.21568627450980393" green="0.65098039215686276" blue="0.89411764705882346" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="BrandRed">
-            <color red="0.92199999094009399" green="0.093999996781349182" blue="0.32899999618530273" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.92156862745098034" green="0.094117647058823528" blue="0.32941176470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BrandRegister">
+            <color red="0.72549019607843135" green="0.90196078431372551" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="NavBarItems">
             <color red="0.19599999487400055" green="0.18400000035762787" blue="0.23899999260902405" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
