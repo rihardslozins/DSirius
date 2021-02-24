@@ -200,17 +200,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hv8-Wu-XA4">
-                                <rect key="frame" x="0.0" y="88" width="414" height="714"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="715"/>
                                 <color key="backgroundColor" name="BackgroundColor"/>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PBx-90-Eme">
-                                <rect key="frame" x="0.0" y="802" width="414" height="60"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PBx-90-Eme" userLabel="MessageField">
+                                <rect key="frame" x="0.0" y="782" width="414" height="80"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write a message..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BH5-3E-913">
                                         <rect key="frame" x="20" y="20" width="314" height="40"/>
                                         <color key="backgroundColor" name="BackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="C2z-Kq-HnN"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="314" id="6LQ-Sw-C4e"/>
+                                            <constraint firstAttribute="height" constant="40" id="ebO-oZ-YQv"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="zEC-xy-e49"/>
                                         </constraints>
                                         <color key="textColor" name="TextFieldMessage"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
@@ -219,10 +221,8 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vzJ-DS-1Xf">
                                         <rect key="frame" x="354" y="20" width="40" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="0pr-E6-Rvo"/>
-                                            <constraint firstAttribute="height" constant="40" id="32E-sQ-Wu5"/>
-                                            <constraint firstAttribute="width" constant="40" id="BGx-Uj-cbW"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="MWp-UE-pAg"/>
+                                            <constraint firstAttribute="width" constant="40" id="CZQ-9y-06s"/>
+                                            <constraint firstAttribute="height" constant="40" id="mh1-zx-B9D"/>
                                         </constraints>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" image="paperplane.fill" catalog="system"/>
@@ -233,25 +233,25 @@
                                 </subviews>
                                 <color key="backgroundColor" name="BrandRed"/>
                                 <constraints>
-                                    <constraint firstItem="vzJ-DS-1Xf" firstAttribute="leading" secondItem="BH5-3E-913" secondAttribute="trailing" constant="20" id="NsW-cf-3yC"/>
-                                    <constraint firstItem="BH5-3E-913" firstAttribute="leading" secondItem="PBx-90-Eme" secondAttribute="leading" constant="20" id="Q52-sE-MaC"/>
-                                    <constraint firstAttribute="height" constant="60" id="Xtz-0K-2Fl"/>
-                                    <constraint firstItem="vzJ-DS-1Xf" firstAttribute="top" secondItem="PBx-90-Eme" secondAttribute="top" constant="20" id="qeW-cE-Mcz"/>
-                                    <constraint firstItem="BH5-3E-913" firstAttribute="top" secondItem="PBx-90-Eme" secondAttribute="top" constant="20" id="sGk-dx-U6t"/>
-                                    <constraint firstAttribute="trailing" secondItem="vzJ-DS-1Xf" secondAttribute="trailing" constant="20" id="y5y-kx-bAw"/>
+                                    <constraint firstItem="BH5-3E-913" firstAttribute="top" secondItem="PBx-90-Eme" secondAttribute="top" constant="20" id="AvJ-x9-auK"/>
+                                    <constraint firstItem="BH5-3E-913" firstAttribute="leading" secondItem="PBx-90-Eme" secondAttribute="leading" constant="20" id="Gyu-4r-zXA"/>
+                                    <constraint firstAttribute="bottom" secondItem="BH5-3E-913" secondAttribute="bottom" constant="20" id="IFf-Xb-YHA"/>
+                                    <constraint firstAttribute="trailing" secondItem="vzJ-DS-1Xf" secondAttribute="trailing" constant="20" id="RQ5-0O-dEm"/>
+                                    <constraint firstAttribute="bottom" secondItem="vzJ-DS-1Xf" secondAttribute="bottom" constant="20" id="f9c-d5-ceD"/>
+                                    <constraint firstItem="vzJ-DS-1Xf" firstAttribute="leading" secondItem="BH5-3E-913" secondAttribute="trailing" constant="20" id="jC7-Ah-X0e"/>
+                                    <constraint firstItem="vzJ-DS-1Xf" firstAttribute="top" secondItem="PBx-90-Eme" secondAttribute="top" constant="20" id="x91-jL-SP3"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="t74-ey-3I6"/>
                         <color key="backgroundColor" name="BrandRed"/>
                         <constraints>
-                            <constraint firstItem="PBx-90-Eme" firstAttribute="leading" secondItem="t74-ey-3I6" secondAttribute="leading" id="1JL-Fh-LdP"/>
-                            <constraint firstItem="t74-ey-3I6" firstAttribute="bottom" secondItem="PBx-90-Eme" secondAttribute="bottom" id="ETZ-eN-88h"/>
-                            <constraint firstItem="hv8-Wu-XA4" firstAttribute="top" secondItem="t74-ey-3I6" secondAttribute="top" id="OaT-tb-TU9"/>
-                            <constraint firstItem="PBx-90-Eme" firstAttribute="top" secondItem="hv8-Wu-XA4" secondAttribute="bottom" id="ZBR-LI-08e"/>
-                            <constraint firstItem="hv8-Wu-XA4" firstAttribute="leading" secondItem="t74-ey-3I6" secondAttribute="leading" id="Zul-ii-BK0"/>
-                            <constraint firstItem="PBx-90-Eme" firstAttribute="trailing" secondItem="t74-ey-3I6" secondAttribute="trailing" id="hjN-2r-j4x"/>
-                            <constraint firstItem="hv8-Wu-XA4" firstAttribute="trailing" secondItem="t74-ey-3I6" secondAttribute="trailing" id="wwX-3K-mwe"/>
+                            <constraint firstItem="PBx-90-Eme" firstAttribute="leading" secondItem="hv8-Wu-XA4" secondAttribute="leading" id="CKT-jS-rYo"/>
+                            <constraint firstItem="hv8-Wu-XA4" firstAttribute="leading" secondItem="t74-ey-3I6" secondAttribute="leading" id="CZb-P1-Kgs"/>
+                            <constraint firstItem="hv8-Wu-XA4" firstAttribute="trailing" secondItem="t74-ey-3I6" secondAttribute="trailing" id="Vo9-ms-M7h"/>
+                            <constraint firstAttribute="bottom" secondItem="hv8-Wu-XA4" secondAttribute="bottom" constant="93" id="sGM-pA-Ne3"/>
+                            <constraint firstItem="hv8-Wu-XA4" firstAttribute="top" secondItem="t74-ey-3I6" secondAttribute="top" id="sex-MA-MYA"/>
+                            <constraint firstItem="PBx-90-Eme" firstAttribute="bottom" secondItem="t74-ey-3I6" secondAttribute="bottom" id="twl-6g-uvU"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="iGd-BX-Dgx">
@@ -268,7 +268,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Va-DX-i7v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3275" y="139"/>
+            <point key="canvasLocation" x="3273.913043478261" y="138.61607142857142"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="k5I-f1-NQS">
