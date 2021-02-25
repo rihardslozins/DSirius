@@ -9,16 +9,20 @@ import UIKit
 import Firebase
 import IQKeyboardManagerSwift
 
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        //Incorporates the Firebase pods
         FirebaseApp.configure()
         
+        //Creates Firestore in a App
         let db = Firestore.firestore()
         
-        //Prints DB in console to remove the warning.
+        //Prints DB in console to remove the warning (Never Used).
         print(db)
         
         //IQKeyboardManager enabling

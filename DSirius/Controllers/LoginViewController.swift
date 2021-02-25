@@ -28,8 +28,8 @@ class LoginViewController: UIViewController {
                     
                 } else {
                     
-                    //Navigate to the ChatViewController
-                    self.performSegue(withIdentifier: K.loginSegue, sender: self)
+                    //Navigate to the ChatViewController, if theres no error login details.
+                    self.performSegue(withIdentifier: MainC.loginSegue, sender: self)
                 }
             }
         }

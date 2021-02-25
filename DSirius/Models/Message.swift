@@ -8,6 +8,6 @@
 import Foundation
 
 struct Message {
-    let sender: String
-    let body: String
+    let sender: String //Contains e-mail adress
+    let body: String //Contains body of the message
 }

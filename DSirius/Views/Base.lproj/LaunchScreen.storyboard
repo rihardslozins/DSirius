@@ -25,7 +25,7 @@
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" name="BackgroundColor"/>
+                        <color key="backgroundColor" name="BackgroundColorApp"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="y36-I1-X7b" secondAttribute="trailing" constant="37" id="ILr-Gv-d8O"/>
                             <constraint firstItem="y36-I1-X7b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="37" id="naN-78-JIj"/>
@@ -41,7 +41,7 @@
     </scenes>
     <resources>
         <image name="Dsirius_Logo" width="338" height="209"/>
-        <namedColor name="BackgroundColor">
+        <namedColor name="BackgroundColorApp">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>

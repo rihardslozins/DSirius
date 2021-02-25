@@ -20,12 +20,14 @@ class ChatViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Hides back button
+        //Hides back button for ChatViewController
         navigationItem.hidesBackButton = true
         addNavBarImage()
         
         tableView.dataSource = self
-        tableView.register(UINib(nibName: K.cellNibName, bundle: nil), forCellReuseIdentifier: K.cellIdentifier)
+        
+        //Registers a custom cell that is created (MessageCell)
+        tableView.register(UINib(nibName: MainC.cellNibName, bundle: nil), forCellReuseIdentifier: MainC.cellIdentifier)
         
         loadMessages()
     }
@@ -43,10 +45,11 @@ class ChatViewController: UIViewController {
         self.navigationItem.titleView = titleView
     }
     
+    
     func loadMessages() {
         
-        db.collection(K.FStore.collectionName)
-            .order(by: K.FStore.dateField)
+        db.collection(MainC.FStore.collectionName)
+            .order(by: MainC.FStore.dateField)
             .addSnapshotListener { (querySnapshot, error) in
                 
                 //Empties the messages
@@ -58,7 +61,7 @@ class ChatViewController: UIViewController {
                     if let snapshotDocuments =  querySnapshot?.documents {
                         for doc in snapshotDocuments{
                             let data = doc.data()
-                            if let messageSender = data[K.FStore.senderField] as? String, let messageBody = data[K.FStore.bodyField] as? String {
+                            if let messageSender = data[MainC.FStore.senderField] as? String, let messageBody = data[MainC.FStore.bodyField] as? String {
                                 let newMessage = Message(sender: messageSender, body: messageBody)
                                 self.messages.append(newMessage)
                                 
@@ -76,11 +79,15 @@ class ChatViewController: UIViewController {
     
     @IBAction func sendPressed(_ sender: Any) {
         
+        //Constant that stores the message in textField
         if let messageBody = messageTextField.text, let messageSender = Auth.auth().currentUser?.email {
-            db.collection(K.FStore.collectionName).addDocument(data: [
-                K.FStore.senderField: messageSender,
-                K.FStore.bodyField: messageBody,
-                K.FStore.dateField: Date().timeIntervalSince1970
+            
+            //Stores data in Firestore
+            db.collection(MainC.FStore.collectionName).addDocument(data: [
+                MainC.FStore.senderField: messageSender,
+                MainC.FStore.bodyField: messageBody,
+                //
+                MainC.FStore.dateField: Date().timeIntervalSince1970
             ]) { (error) in
                 if let err = error {
                     print("There was an issue, \(err)")
@@ -99,6 +106,7 @@ class ChatViewController: UIViewController {
             //Navigates to start screen when Log Out is pressed
             navigationController?.popToRootViewController(animated: true)
             
+            //Catch block will carry out if theres is a problem signing out the user
         } catch let signOutError as NSError {
             print ("Error signing out: %@", signOutError)
         }
@@ -115,7 +123,8 @@ extension ChatViewController: UITableViewDataSource {
         
         let message = messages[indexPath.row]
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath) as! MessageCell
+        //Shows custom cell, that is created
+        let cell = tableView.dequeueReusableCell(withIdentifier: MainC.cellIdentifier, for: indexPath) as! MessageCell
         cell.label?.text = message.body
         
         //This is a message from current user
@@ -123,14 +132,14 @@ extension ChatViewController: UITableViewDataSource {
             
             cell.leftImageView.isHidden = true
             cell.rightImageView.isHidden = false
-            cell.messageBubble.backgroundColor = UIColor(named: K.BrandColors.bubbleBlue)
+            cell.messageBubble.backgroundColor = UIColor(named: MainC.Colors.bubbleBlue)
             
         }
         //This is a message from other user
         else {
             cell.leftImageView.isHidden = false
             cell.rightImageView.isHidden = true
-            cell.messageBubble.backgroundColor = UIColor(named: K.BrandColors.bubbleRed)
+            cell.messageBubble.backgroundColor = UIColor(named: MainC.Colors.bubbleRed)
         }
         
         return cell

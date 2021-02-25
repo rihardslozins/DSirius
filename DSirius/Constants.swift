@@ -5,14 +5,14 @@
 //  Created by Rihards Lozins on 23/02/2021.
 //
 
-struct K {
+struct MainC {
     
     static let cellIdentifier = "ReusableCell"
     static let cellNibName = "MessageCell"
     static let registerSegue = "RegisterToChat"
     static let loginSegue = "LoginToChat"
     
-    struct BrandColors {
+    struct Colors {
         
         static let bubbleBlue = "BrandBlueBubble"
         static let bubbleRed = "BrandRedBubble"

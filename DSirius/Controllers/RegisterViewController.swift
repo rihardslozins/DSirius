@@ -27,8 +27,8 @@ class RegisterViewController: UIViewController {
                     self.present(alert, animated: true)
                     
                 } else {
-                    //Navigate to the ChatViewController
-                    self.performSegue(withIdentifier: K.registerSegue, sender: self)
+                    //Navigates to the ChatViewController, if theres no error in email and password.
+                    self.performSegue(withIdentifier: MainC.registerSegue, sender: self)
                 }
             }
         }
