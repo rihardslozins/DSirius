@@ -52,7 +52,6 @@ class ChatViewController: UIViewController {
             .order(by: MainC.FStore.dateField)
             .addSnapshotListener { (querySnapshot, error) in
                 
-                //Empties the messages
                 self.messages = []
                 
                 if let err = error {
@@ -86,7 +85,7 @@ class ChatViewController: UIViewController {
             db.collection(MainC.FStore.collectionName).addDocument(data: [
                 MainC.FStore.senderField: messageSender,
                 MainC.FStore.bodyField: messageBody,
-                //
+                //Sorts messages by sent date, in date object with the method (number of seconds)
                 MainC.FStore.dateField: Date().timeIntervalSince1970
             ]) { (error) in
                 if let err = error {
